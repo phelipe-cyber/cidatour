@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cida Tour</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- Bootstrap4 Duallistbox -->
+  <link rel="stylesheet" href="../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+  <!-- BS Stepper -->
+  <link rel="stylesheet" href="../../plugins/bs-stepper/css/bs-stepper.min.css">
+  <!-- dropzonejs -->
+  <link rel="stylesheet" href="../../plugins/dropzone/min/dropzone.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+</head>
+
+<body class="hold-transition sidebar-mini sidebar-collapse">
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index3.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Contato</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0">Cadastro</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Cadastro</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+
+              <section class="content">
+                <div class="container-fluid">
+                  <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-12">
+                      <!-- general form elements -->
+                      <div class="card card-primary">
+                        <div class="card-header">
+                          <h3 class="card-title">Dados Pessoais</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form id="quickForm" action="salvar_dados.php" method="POST" enctype="multipart/form-data" >
+
+                          <div class="card-body">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Nome:</label>
+                              <input autofocus ="text" class="form-control" id="nome" name="nome"
+                                placeholder="Nome">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Sobrenome:</label>
+                              <input type="text" class="form-control" id="sobrenome" name="sobrenome"
+                                placeholder="Sobrenome">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">RG:</label>
+                              <input type="text" class="form-control" id="rg" name="rg"
+                                placeholder="RG">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">CPF:</label>
+                              <input type="text" class="form-control" id="CPF" name="cpf"
+                                placeholder="CPF" data-inputmask="'mask': ['999.999.999-99']" data-mask>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Telefone:</label>
+                              <input type="text" class="form-control" id="telefone" name="telefone"
+                                placeholder="Telefone" data-inputmask="'mask': ['(99) 9999-9999', '(99) 99999-9999']" data-mask>
+                            </div>
+                            <div class="form-group">
+                              <label>Data de Nascimento:</label>
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                                <input type="text" name="datanascimento" id="datanascimento" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                              </div>
+                              <!-- /.input group -->
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">E-mail</label>
+                              <input type="email" name="email" itemid="email" class="form-control" id="exampleInputEmail1"
+                                placeholder="Enter email">
+                            </div>
+                           
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Confirmar cadastro</button>
+                          </div>
+                        </form>
+                      </div>
+
+                    </div>
+                    <!-- /.col-md-6 -->
+                  </div>
+                  <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+          </div>
+          <!-- /.content-wrapper -->
+
+
+
+          <!-- REQUIRED SCRIPTS -->
+
+          <!-- jQuery -->
+          <script src="plugins/jquery/jquery.min.js"></script>
+          <!-- Bootstrap 4 -->
+          <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <!-- AdminLTE App -->
+          <script src="dist/js/adminlte.min.js"></script>
+
+          <!-- jQuery -->
+          <script src="../../plugins/jquery/jquery.min.js"></script>
+          <!-- Bootstrap 4 -->
+          <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <!-- Select2 -->
+          <script src="../../plugins/select2/js/select2.full.min.js"></script>
+          <!-- Bootstrap4 Duallistbox -->
+          <script src="../../plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+          <!-- InputMask -->
+          <script src="../../plugins/moment/moment.min.js"></script>
+          <script src="../../plugins/inputmask/jquery.inputmask.min.js"></script>
+          <!-- date-range-picker -->
+          <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+          <!-- bootstrap color picker -->
+          <script src="../../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+          <!-- Tempusdominus Bootstrap 4 -->
+          <script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+          <!-- Bootstrap Switch -->
+          <script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+          <!-- BS-Stepper -->
+          <script src="../../plugins/bs-stepper/js/bs-stepper.min.js"></script>
+          <!-- dropzonejs -->
+          <script src="../../plugins/dropzone/min/dropzone.min.js"></script>
+          <!-- AdminLTE App -->
+          <script src="../../dist/js/adminlte.min.js"></script>
+
+          <!-- Bootstrap 4 -->
+          <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <!-- jquery-validation -->
+          <script src="../../plugins/jquery-validation/jquery.validate.min.js"></script>
+          <script src="../../plugins/jquery-validation/additional-methods.min.js"></script>
+
+          <script>
+            $(function () {
+              
+              //Datemask dd/mm/yyyy
+              $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+              //Datemask2 mm/dd/yyyy
+              $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+              //Money Euro
+              $('[data-mask]').inputmask()
+          
+              //Date picker
+              $('#reservationdate').datetimepicker({
+                  format: 'L'
+              });
+          
+              //Date and time picker
+              $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+          
+              //Date range picker
+              $('#reservation').daterangepicker()
+              //Date range picker with time picker
+              $('#reservationtime').daterangepicker({
+                timePicker: true,
+                timePickerIncrement: 30,
+                locale: {
+                  format: 'MM/DD/YYYY hh:mm A'
+                }
+              })
+              //Date range as a button
+              $('#daterange-btn').daterangepicker(
+                {
+                  ranges   : {
+                    'Today'       : [moment(), moment()],
+                    'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                  },
+                  startDate: moment().subtract(29, 'days'),
+                  endDate  : moment()
+                },
+                function (start, end) {
+                  $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+                }
+              )
+          
+              //Timepicker
+              $('#timepicker').datetimepicker({
+                format: 'LT'
+              })
+          
+              //Bootstrap Duallistbox
+              $('.duallistbox').bootstrapDualListbox()
+          
+              //Colorpicker
+              $('.my-colorpicker1').colorpicker()
+              //color picker with addon
+              $('.my-colorpicker2').colorpicker()
+          
+              $('.my-colorpicker2').on('colorpickerChange', function(event) {
+                $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+              })
+          
+              $("input[data-bootstrap-switch]").each(function(){
+                $(this).bootstrapSwitch('state', $(this).prop('checked'));
+              })
+          
+            })
+           
+
+          </script>
+
+<script>
+    $(function () {
+              $.validator.setDefaults({
+                submitHandler: function () {
+                  alert( "Form successful submitted!" );
+                }
+              });
+              $('#quickForm').validate({
+                rules: {
+                  email: {
+                    required: true,
+                    email: true,
+                  },
+                  nome: {
+                    required: true,
+                    nome: true,
+                  },
+                  sobrenome: {
+                    required: true,
+                    sobrenome: true,
+                  },
+                  rg: {
+                    required: true,
+                    rg: true,
+                  },
+                  cpf: {
+                    required: true,
+                    cpf: true,
+                  },
+                  telefone: {
+                    required: true,
+                    telefone: true,
+                  },
+                  datanascimento: {
+                    required: true,
+                    datanascimento: true,
+                  },
+                  terms: {
+                    required: true
+                  },
+                },
+
+                messages: {
+                  email: {
+                    required: "O e-mail é obrigatorio",
+                    email: "Por favor digitar o seu e-mail"
+                  },
+                  nome: {
+                    required: "O Nome é obrigatorio",
+                    nome: "Por favor digitar o seu nome"
+                  },
+                  sobrenome: {
+                    required: "O Sobrenome é obrigatorio",
+                    sobrenome: "Por favor digitar o seu Sobrenome"
+                  },
+                  rg: {
+                    required: "O RG é obrigatorio",
+                    rg: "Por favor digitar o seu RG"
+                  },
+                  cpf: {
+                    required: "O CPF é obrigatorio",
+                    cpf: "Por favor digitar o seu CPF"
+                  },
+                  telefone: {
+                    required: "O Telefone é obrigatorio",
+                    telefone: "Por favor digitar o seu Telefone"
+                  },
+                  datanascimento: {
+                    required: "A Data de nascimento é obrigatorio",
+                    datanascimento: "Por favor digitar a Data de nascimento"
+                  },
+                  terms: "Por favor aceitar os termos"
+                },
+                errorElement: 'span',
+                errorPlacement: function (error, element) {
+                  error.addClass('invalid-feedback');
+                  element.closest('.form-group').append(error);
+                },
+                highlight: function (element, errorClass, validClass) {
+                  $(element).addClass('is-invalid');
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                  $(element).removeClass('is-invalid');
+                }
+              });
+            });
+            
+</script>
+
+        </body>
+
+</html>
